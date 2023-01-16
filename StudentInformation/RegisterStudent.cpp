@@ -18,7 +18,7 @@ void RegisterStudent()
 	cin >> numOfCourses;
 
 	string course = "";
-	double averageGrade = 2.0;
+	double averageGrade = 0.0;
 	for (int i = 0; i < numOfCourses * 2; i++)
 	{
 		if (i % 2 == 0)
