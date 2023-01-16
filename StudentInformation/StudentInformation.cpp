@@ -1,9 +1,6 @@
-#include "Header.h";
-#include "Student.cpp"
+#include "Methods.h"
 
 int main()
 {
 	Menu();
-
-	set<Student> Students;//insert erase
 }

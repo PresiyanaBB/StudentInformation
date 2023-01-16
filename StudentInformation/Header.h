@@ -1,13 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include <set>
 #include <string>
 #include <map>
+#include <set>
 using namespace std;
-
-void Menu();
-void RegisterStudent();
-void DeregisterStudent();
-void SortStudents();
-void VisualizeFile();
-void SaveFile();
