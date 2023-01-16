@@ -3,22 +3,14 @@
 
 void Menu()
 {
-	Student student;
-	student.fn = "fn_34567890";
-	student.group = "3";
-	student.name = "pesho";
-	student.courses = { "Math","OOP"};
-
-	SaveFile(student);
-
 	cout
 		<< "Please select an option:\n" <<
-		"1. Register new student\n" <<
+		"1. Register new student\n" << //max 10 courses
 		"2. Deregister student\n" <<
 		"3. Sort students by faculty number and average grade\n" << //ascending or descending
-		"4. Visualize students from group\n\n" <<
+		"4. Visualize students from group\n" <<
+		"5. Exit\n\n" <<
 		"Enter number of your option: ";
-	//always save file
 
 	int option = 1;
 	cin >> option;
@@ -37,7 +29,12 @@ void Menu()
 	case 4:
 		VisualizeFile();
 		break;
+	case 5:
+		return;
+		break;
 	default:
 		break;
 	}
+
+	Menu();
 }

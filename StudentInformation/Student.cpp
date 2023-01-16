@@ -8,6 +8,6 @@ struct Student
 	string fn;
 	string group;
 	set<string> courses{};
-	map<string, double> grades{};
+	map<string, string> grades{};
 	double averageGrade;
 };

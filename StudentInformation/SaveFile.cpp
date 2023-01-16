@@ -7,22 +7,21 @@ void SaveFile(Student student)
 	string group = "Groups/Group_" + student.group + ".txt";
 	ofstream ofs;
 	int counter = 1;
-	ofs.open(group);
+	ofs.open(group,ios::app);
 
 	string newStudent = student.fn + " - " + student.name + " - ";
-	for(string c : student.courses)
+	for (string c : student.courses)
 	{
 		if (student.courses.size() == counter)
-		{
-			newStudent += c;
-		}
-		else
-			newStudent += c + ", ";
+			newStudent += c + '(' + student.grades[c] + ')';
 
-		counter++;		
+		else
+			newStudent += c + '(' + student.grades[c] + "), ";
+
+		counter++;
 	}
 
-	ofs << newStudent;
+	ofs << newStudent << endl;
 
 	ofs.close();
 }

@@ -13,7 +13,7 @@ void VisualizeFile()
 
 	while (!ifs.eof())
 	{
-		ifs >> currentStudent;
+		getline(ifs,currentStudent);
 		cout << currentStudent << endl;
 	}
 
