@@ -127,11 +127,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="DeregisterStudent.cpp" />
+    <ClCompile Include="Menu.cpp" />
+    <ClCompile Include="RegisterStudent.cpp" />
+    <ClCompile Include="SaveFile.cpp" />
+    <ClCompile Include="SortStudents.cpp" />
     <ClCompile Include="Student.cpp" />
     <ClCompile Include="StudentInformation.cpp" />
+    <ClCompile Include="VisualizeFile.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Student.h" />
+    <ClInclude Include="Header.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -1,17 +1,9 @@
-using namespace std;
-#include <iostream>
-#include <set>
-#include <map>
-#include <fstream>
+#include "Header.h";
+#include "Student.cpp"
 
 int main()
 {
-	ofstream ofstr;
-	ofstr.open("/Group_8.txt");
+	Menu();
 
-	set<int> a;//insert erase
-	map<string, int> b;
+	set<Student> Students;//insert erase
 }
-
-//map["gyg"] = 1
-//set == list
