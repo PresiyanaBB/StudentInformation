@@ -11,6 +11,7 @@ void VisualizeFile()
 	ifstream ifs;
 	ifs.open(group);
 
+	cout << endl;
 	while (!ifs.eof())
 	{
 		getline(ifs,currentStudent);

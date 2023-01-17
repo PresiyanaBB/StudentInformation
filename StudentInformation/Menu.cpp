@@ -7,7 +7,7 @@ void Menu()
 		<< "Please select an option:\n" <<
 		"1. Register new student\n" << //max 10 courses
 		"2. Deregister student\n" <<
-		"3. Sort students by faculty number and average grade\n" << //ascending or descending
+		"3. Sort students by faculty number and average grade\n" << //by faculty number
 		"4. Visualize students from group\n" <<
 		"5. Exit\n\n" <<
 		"Enter number of your option: ";
@@ -36,5 +36,6 @@ void Menu()
 		break;
 	}
 
+	cout << endl;
 	Menu();
 }
