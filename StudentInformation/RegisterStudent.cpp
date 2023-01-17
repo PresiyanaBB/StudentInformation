@@ -1,4 +1,5 @@
 #include "Methods.h"
+#include <iomanip>
 
 void RegisterStudent()
 {
@@ -33,8 +34,8 @@ void RegisterStudent()
 			cout << "Grade: ";
 			string grade = "";
 			cin >> grade;
-			averageGrade += stod(grade);
-			student.grades[course] = grade;
+			averageGrade += stod(grade) + 0.000;
+			student.grades[course] = to_string(stod(grade) + 0.000);
 		}
 	}
 

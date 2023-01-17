@@ -14,15 +14,15 @@ void SaveFile(Student student)
 	for (string c : student.courses)
 	{
 		if (student.courses.size() == counter)
-			newStudent += c + '(' + student.grades[c] + ')' + " - ";
+			newStudent += c + '(' + student.grades[c].substr(0,4) + ')' + " - ";
 
 		else
-			newStudent += c + '(' + student.grades[c] + "), ";
+			newStudent += c + '(' + student.grades[c].substr(0,4) + "), ";
 
 		counter++;
 	}
 
-	ofs << newStudent << setprecision(3) << student.averageGrade << endl;
+	ofs << newStudent << setprecision(3) << (to_string(student.averageGrade + 0.000)).substr(0,4) << endl;
 
 	ofs.close();
 }
