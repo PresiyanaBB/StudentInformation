@@ -1,4 +1,53 @@
+#include "Header.h"
+#include "Constants.cpp"
+
 void DeregisterStudent()
 {
+	string groupNum;
+	cout << "Choose group number(1 to 8): ";
+	cin >> groupNum;
+	string group = "Groups/Group_" + groupNum + ".txt";
 
+	string fn = "";
+	cout << "Enter faculty number: ";
+	cin >> fn;
+
+	string studentsInfo[MAX_STUDENTS_IN_GROUP]{};
+	string facultyNumbers[MAX_STUDENTS_IN_GROUP]{};
+
+	ifstream ifs;
+	ifs.open(group);
+	int indexOfStudent = 0;
+	int countOfStudents = 0;
+
+	for (int i = 0; !ifs.eof(); i++)
+	{
+		getline(ifs, studentsInfo[i]);
+		if (studentsInfo[i] == "")
+			continue;
+
+		int interval = studentsInfo[i].find(" ");
+		facultyNumbers[i] = studentsInfo[i].substr(0, interval);
+
+		if (facultyNumbers[i] == fn)
+			indexOfStudent = i;
+
+		countOfStudents++;
+	}
+
+	ifs.close();
+
+	ofstream ofs;
+	ofs.open(group);
+
+	for (int i = 0; i < countOfStudents; i++)
+	{
+		if (i == indexOfStudent)
+			continue;
+
+		else
+			ofs << studentsInfo[i] << endl;
+	}
+
+	ofs.close();
 }

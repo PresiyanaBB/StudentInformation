@@ -43,5 +43,5 @@ void RegisterStudent()
 
 	SaveFile(student);
 
-	cout << "\nStudent has been registered successfully\n\n";
+	cout << "\nStudent has been registered successfully\n";
 }

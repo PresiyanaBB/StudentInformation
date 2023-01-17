@@ -1,0 +1,1 @@
+const int MAX_STUDENTS_IN_GROUP = 30;

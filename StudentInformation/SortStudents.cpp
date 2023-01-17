@@ -1,6 +1,5 @@
 #include "Header.h"
-
-const int MAX_STUDENTS_IN_GROUP = 30;
+#include "Constants.cpp"
 
 void bubbleSort(double grades[], int n,string studentInfo[])
 {
@@ -70,13 +69,7 @@ void SortStudents()
 	ofs.open(group);
 
 	for (int i = 0; i < countOfStudents; i++)
-	{
-		if (i == countOfStudents - 1)
-			ofs << studentsInfo[i];
-
-		else 
-			ofs << studentsInfo[i] << endl;
-	}
+		ofs << studentsInfo[i] << endl;
 
 	ofs.close();
 }

@@ -22,7 +22,7 @@ void SaveFile(Student student)
 		counter++;
 	}
 
-	ofs << newStudent << setprecision(3) << (to_string(student.averageGrade + 0.000)).substr(0,4) << endl;
+	ofs << newStudent << (to_string(student.averageGrade + 0.000)).substr(0, 4) << endl;
 
 	ofs.close();
 }
