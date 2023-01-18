@@ -1,6 +1,6 @@
 #include "Student.cpp"
 
-void Menu();
+bool Menu();
 void RegisterStudent();
 void DeregisterStudent();
 void SortStudents();

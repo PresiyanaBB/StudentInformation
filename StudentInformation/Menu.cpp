@@ -1,11 +1,11 @@
 #include "Header.h"
 #include "Methods.h"
 
-void Menu()
+bool Menu()
 {
 	cout
 		<< "Please select an option:\n" <<
-		"1. Register new student\n" << //min 1 and max 10 courses
+		"1. Register new student\n" <<
 		"2. Deregister student\n" <<
 		"3. Sort students by faculty number or average grade\n" <<
 		"4. Visualize students from group\n" <<
@@ -30,14 +30,12 @@ void Menu()
 		VisualizeFile();
 		break;
 	case 5:
-		return;
+		return false;
 		break;
 	default:
 		break;
 	}
 
 	cout << endl;
-	Menu();
-
-	//system("cls");
+	return true;
 }

@@ -96,4 +96,6 @@ void SortStudents()
 		ofs << studentsInfo[i] << endl;
 
 	ofs.close();
+
+	system("cls");
 }
