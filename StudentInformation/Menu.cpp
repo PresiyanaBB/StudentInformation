@@ -5,14 +5,14 @@ void Menu()
 {
 	cout
 		<< "Please select an option:\n" <<
-		"1. Register new student\n" << //max 10 courses
+		"1. Register new student\n" << //min 1 and max 10 courses
 		"2. Deregister student\n" <<
-		"3. Sort students by faculty number and average grade\n" << //by faculty number
+		"3. Sort students by faculty number or average grade\n" <<
 		"4. Visualize students from group\n" <<
 		"5. Exit\n\n" <<
 		"Enter number of your option: ";
 
-	int option = 1;
+	int option = 5;
 	cin >> option;
 
 	switch (option)
@@ -38,4 +38,6 @@ void Menu()
 
 	cout << endl;
 	Menu();
+
+	//system("cls");
 }

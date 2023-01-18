@@ -1,19 +1,30 @@
 #include "Header.h"
 #include "Constants.cpp"
+#include <algorithm>
 
-void bubbleSort(double grades[], int n,string studentInfo[])
+template <typename T>
+
+//sort for grades and fn
+void bubbleSort(T criteria[], int n,string studentInfo[])
 {
 	int i, j;
 	for (i = 0; i < n - 1; i++)
 		for (j = 0; j < n - i - 1; j++)
-			if (grades[j] > grades[j + 1])
+			if (criteria[j] > criteria[j + 1])
 			{
 				swap(studentInfo[j], studentInfo[j + 1]);
-				swap(grades[j], grades[j + 1]);
+				swap(criteria[j], criteria[j + 1]);
 			}
 }
 
-//TODO: sort by faculty number
+string getFacultyNumber(string fullInfo)
+{
+	string fn = "";
+	for (int i = 0; fullInfo[i] != ' '; i++)
+		fn += fullInfo[i];
+
+	return fn;
+}
 
 void SortStudents()
 {
@@ -25,10 +36,16 @@ void SortStudents()
 	cout << "How would you like to sort them?\n" <<
 		"1. Ascending, 2. Descending: ";
 
-	int sortOption = 1;
-	cin >> sortOption;
+	int sortOptionAscDesc = 1;
+	cin >> sortOptionAscDesc;
 
-	if (sortOption < 1 || sortOption > 2)
+	cout << "How would you like to sort them?\n" <<
+		"1. By average grade, 2. By faculty number: ";
+
+	int sortOptionFnGrade = 1;
+	cin >> sortOptionFnGrade;
+
+	if (sortOptionAscDesc < 1 || sortOptionAscDesc > 2)
 	{
 		cout << endl;
 		return;
@@ -36,23 +53,30 @@ void SortStudents()
 
 	string studentsInfo[MAX_STUDENTS_IN_GROUP]{};
 	double grades[MAX_STUDENTS_IN_GROUP]{};
+	string facultyNumbers[MAX_STUDENTS_IN_GROUP]{};
 
 	ifstream ifs;
 	ifs.open(group);
 	int countOfStudents = 0;
 
+	//read student information from file
 	for (int i = 0; !ifs.eof(); i++)
 	{
 		getline(ifs, studentsInfo[i]);
 		if (studentsInfo[i] == "")
 			continue;
 		grades[i] = stod(studentsInfo[i].substr(studentsInfo[i].size() - 4));
+		facultyNumbers[i] = getFacultyNumber(studentsInfo[i]);
 		countOfStudents++;
 	}
 
-	bubbleSort(grades,countOfStudents,studentsInfo);
+	if (sortOptionFnGrade == 1)
+		bubbleSort(grades,countOfStudents,studentsInfo);
 
-	if (sortOption == 2)
+	if (sortOptionFnGrade == 2)
+		bubbleSort(facultyNumbers, countOfStudents, studentsInfo);
+
+	if (sortOptionAscDesc == 2) //descending
 	{
 		string temp;
 		for (int i = 0, j = countOfStudents - 1; i < countOfStudents / 2; i++, j--)
