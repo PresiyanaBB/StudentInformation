@@ -4,7 +4,8 @@
 bool Menu()
 {
 	cout
-		<< "Please select an option:\n" <<
+		<< "------------------------MENU------------------------\n\n" <<
+		"Please select an option:\n" <<
 		"1. Register new student\n" <<
 		"2. Deregister student\n" <<
 		"3. Sort students by faculty number or average grade\n" <<

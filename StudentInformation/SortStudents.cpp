@@ -1,6 +1,7 @@
-#include "Header.h"
 #include "Constants.cpp"
 #include <algorithm>
+#include "Header.h"
+#include "Validation.h"
 
 template <typename T>
 
@@ -28,10 +29,8 @@ string getFacultyNumber(string fullInfo)
 
 void SortStudents()
 {
-	string groupNum;
-	cout << "Choose group number(1 to 8): ";
-	cin >> groupNum;
-	string group = "Groups/Group_" + groupNum + ".txt";
+	string groupNumber = "";
+	string group = ValidateGroup(groupNumber);
 
 	cout << "How would you like to sort them?\n" <<
 		"1. Ascending, 2. Descending: ";
@@ -44,6 +43,8 @@ void SortStudents()
 
 	int sortOptionFnGrade = 1;
 	cin >> sortOptionFnGrade;
+
+	system("cls");
 
 	if (sortOptionAscDesc < 1 || sortOptionAscDesc > 2)
 	{
@@ -96,6 +97,4 @@ void SortStudents()
 		ofs << studentsInfo[i] << endl;
 
 	ofs.close();
-
-	system("cls");
 }

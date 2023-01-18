@@ -1,12 +1,11 @@
-#include "Header.h"
 #include "Constants.cpp"
+#include "Header.h"
+#include "Validation.h"
 
 void DeregisterStudent()
 {
-	string groupNum;
-	cout << "Choose group number(1 to 8): ";
-	cin >> groupNum;
-	string group = "Groups/Group_" + groupNum + ".txt";
+	string groupNumber = "";
+	string group = ValidateGroup(groupNumber);
 
 	string fn = "";
 	cout << "Enter faculty number: ";

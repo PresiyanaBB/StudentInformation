@@ -1,6 +1,7 @@
 #include "Methods.h"
 #include <iomanip>
 #include "Constants.cpp"
+#include "Validation.h"
 
 const string Courses[MAX_COURSES] = { "Sport", "Math", "Science", "Algebra", "Geometry", "OOP", "Biology", "Chemistry", "History", "Geography" };
 
@@ -27,8 +28,7 @@ void RegisterStudent()
 	cout << "Faculty number: ";
 	cin >> student.fn;
 
-	cout << "Group number: ";
-	cin >> student.group;
+	string group = ValidateGroup(student.group);
 
 	cout << "Number of courses(between " << MIN_COURSES << " and " << MAX_COURSES << "): ";
 	int numOfCourses = 0;
@@ -88,5 +88,5 @@ void RegisterStudent()
 
 	system("cls");
 
-	cout << "\nStudent has been registered successfully\n";
+	cout << "Student has been registered successfully\n";
 }

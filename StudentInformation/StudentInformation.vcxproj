@@ -135,11 +135,13 @@
     <ClCompile Include="SortStudents.cpp" />
     <ClCompile Include="Student.cpp" />
     <ClCompile Include="StudentInformation.cpp" />
+    <ClCompile Include="ValidateGroup.cpp" />
     <ClCompile Include="VisualizeFile.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Header.h" />
     <ClInclude Include="Methods.h" />
+    <ClInclude Include="Validation.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
