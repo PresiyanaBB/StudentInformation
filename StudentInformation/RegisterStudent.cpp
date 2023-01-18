@@ -67,7 +67,6 @@ void RegisterStudent()
 				cin >> grade;
 				try
 				{
-					stod(grade);
 					if (stod(grade) < 0.0 || stod(grade) > 6.00)
 						continue;
 					break;

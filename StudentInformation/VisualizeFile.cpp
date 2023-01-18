@@ -14,7 +14,6 @@ void VisualizeFile()
 
 		try
 		{
-			stoi(groupNum);
 			if (stoi(groupNum) < 1 || stoi(groupNum) > 8)
 				continue;
 			break;
