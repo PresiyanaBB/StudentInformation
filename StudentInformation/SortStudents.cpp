@@ -1,5 +1,4 @@
 #include "Constants.cpp"
-#include <algorithm>
 #include "Header.h"
 #include "Validation.h"
 
@@ -35,22 +34,24 @@ void SortStudents()
 	cout << "How would you like to sort them?\n" <<
 		"1. Ascending, 2. Descending: ";
 
-	int sortOptionAscDesc = 1;
+	string sortOptionAscDesc = "1";
 	cin >> sortOptionAscDesc;
+
+	if (sortOptionAscDesc.substr(0, 1) != "1" && sortOptionAscDesc.substr(0, 1) != "2")
+		sortOptionAscDesc.substr(0, 1) = "1"; //default sorting is ascending
 
 	cout << "How would you like to sort them?\n" <<
 		"1. By average grade, 2. By faculty number: ";
 
-	int sortOptionFnGrade = 1;
+	string sortOptionFnGrade = "1";
 	cin >> sortOptionFnGrade;
+
+	if (sortOptionFnGrade.substr(0,1) != "1" && sortOptionFnGrade.substr(0, 1) != "2")
+		sortOptionFnGrade = "1"; //default sorting is by average grade
 
 	system("cls");
 
-	if (sortOptionAscDesc < 1 || sortOptionAscDesc > 2)
-	{
-		cout << endl;
-		return;
-	}
+	cout << "Students have been sorted successfully." << endl;
 
 	string studentsInfo[MAX_STUDENTS_IN_GROUP]{};
 	double grades[MAX_STUDENTS_IN_GROUP]{};
@@ -71,13 +72,13 @@ void SortStudents()
 		countOfStudents++;
 	}
 
-	if (sortOptionFnGrade == 1)
+	if (sortOptionFnGrade == "1") //by average grade
 		bubbleSort(grades,countOfStudents,studentsInfo);
 
-	if (sortOptionFnGrade == 2)
+	if (sortOptionFnGrade == "2") //by faculty number
 		bubbleSort(facultyNumbers, countOfStudents, studentsInfo);
 
-	if (sortOptionAscDesc == 2) //descending
+	if (sortOptionAscDesc == "2") //descending
 	{
 		string temp;
 		for (int i = 0, j = countOfStudents - 1; i < countOfStudents / 2; i++, j--)

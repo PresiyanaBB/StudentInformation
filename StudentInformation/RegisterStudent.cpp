@@ -20,10 +20,12 @@ void showCourses()
 
 void RegisterStudent()
 {
+	cin.ignore();
 	Student student;
 
-	cout << "Name: ";
-	cin >> student.name;
+	cout << "Name(first name, last name): ";
+	cin >> student.firstName;
+	cin >> student.lastName;
 
 	cout << "Faculty number: ";
 	cin >> student.fn;
@@ -40,6 +42,7 @@ void RegisterStudent()
 	showCourses();
 	string course = "";
 	double averageGrade = 0.0;
+
 	for (int i = 0; i < numOfCourses * 2; i++)
 	{
 		if (i % 2 == 0)
@@ -67,7 +70,7 @@ void RegisterStudent()
 				cin >> grade;
 				try
 				{
-					if (stod(grade) < 0.0 || stod(grade) > 6.00)
+					if (stod(grade) < 2.0 || stod(grade) > 6.00)
 						continue;
 					break;
 				}

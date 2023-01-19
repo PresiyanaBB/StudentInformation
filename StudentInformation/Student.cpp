@@ -2,7 +2,8 @@
 
 struct Student
 {
-	string name;
+	string firstName;
+	string lastName;
 	string fn;
 	string group;
 	set<string> courses{};
