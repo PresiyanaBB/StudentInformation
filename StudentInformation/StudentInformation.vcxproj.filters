@@ -15,45 +15,45 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="StudentInformation.cpp">
+    <ClCompile Include="CppFiles\Constants.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Student.cpp">
+    <ClCompile Include="CppFiles\DeregisterStudent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Menu.cpp">
+    <ClCompile Include="CppFiles\Menu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="RegisterStudent.cpp">
+    <ClCompile Include="CppFiles\RegisterStudent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DeregisterStudent.cpp">
+    <ClCompile Include="CppFiles\SaveFile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SortStudents.cpp">
+    <ClCompile Include="CppFiles\SortStudents.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="VisualizeFile.cpp">
+    <ClCompile Include="CppFiles\Student.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SaveFile.cpp">
+    <ClCompile Include="CppFiles\StudentInformation.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Constants.cpp">
+    <ClCompile Include="CppFiles\ValidateGroup.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ValidateGroup.cpp">
+    <ClCompile Include="CppFiles\VisualizeFile.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Header.h">
+    <ClInclude Include="Headers\Header.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Methods.h">
+    <ClInclude Include="Headers\Methods.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Validation.h">
+    <ClInclude Include="Headers\Validation.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

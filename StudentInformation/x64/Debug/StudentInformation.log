@@ -1,0 +1,13 @@
+﻿  Constants.cpp
+  DeregisterStudent.cpp
+C:\Users\Go6o\source\repos\StudentInformationF\StudentInformation\CppFiles\DeregisterStudent.cpp(28,43): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Menu.cpp
+  RegisterStudent.cpp
+  SaveFile.cpp
+  SortStudents.cpp
+  Student.cpp
+  StudentInformation.cpp
+  ValidateGroup.cpp
+  VisualizeFile.cpp
+  Generating Code...
+  StudentInformation.vcxproj -> C:\Users\Go6o\source\repos\StudentInformationF\x64\Debug\StudentInformation.exe
